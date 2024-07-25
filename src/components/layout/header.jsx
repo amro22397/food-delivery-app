@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 
-const header = () => {
+const Header = () => {
   return (
     <div>
       <header className="flex items-center justify-between">
@@ -19,4 +20,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
