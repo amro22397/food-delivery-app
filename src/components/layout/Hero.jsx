@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-<section className='hero'>
+<section className='hero my-5'>
     <div className='py-12'>
         <h1 className="text-4xl font-semibold">Everything<br/>
          is better<br/>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import MenuItem from '../menu/MenuItem'
 
 const HomeMenu = () => {
   return (
@@ -18,7 +19,7 @@ const HomeMenu = () => {
 
         </div>
 
-        <div className="text-center">
+        <div className="text-center mb-7">
             <h3 className="uppercase text-gray-500 font-semibold
             loading-4">
                 Check out
@@ -28,8 +29,13 @@ const HomeMenu = () => {
             italic">Menu</h2>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-            
+        <div className="grid grid-cols-4 gap-4">
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
         </div>
     </section>
   )
