@@ -6,7 +6,7 @@ import SectionHeaders from "@/components/layout/SectionHeaders";
 export default function Home() {
   return (
     <>
-    <Header />
+    
     <Hero />
     <HomeMenu />
     <section className="text-center my-16">
@@ -41,10 +41,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <footer className="border-t p-8 text-center text-gray-500
-      mt-16">
-        &copy; {new Date().getFullYear()} All rights reserved
-      </footer>
+      
     </>
   );
 }
