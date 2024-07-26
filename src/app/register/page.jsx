@@ -1,20 +1,21 @@
 "use client"
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (ev) => {
         ev.preventDefault();
         fetch('/api/register', {
             method: 'POST',
             body: JSON.stringify({email, password}),
-            headers: {'Content-Type': 'application/json'}
-        })
+            headers: {'Content-Type': 'application/json'},
+        });
     }
+    
       return (
     <section className="mt-8">
         <h1 className="text-center text-red-600 text-4xl
