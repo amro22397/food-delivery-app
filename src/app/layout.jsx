@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></link>
+      </head>
       <body className={inter.className}>
         <main className="max-w-6xl mx-auto p-4">
 
@@ -22,7 +26,7 @@ export default function RootLayout({ children }) {
       mt-16">
         &copy; {new Date().getFullYear()} All rights reserved
       </footer>
-      
+
         </main>
         </body>
     </html>
