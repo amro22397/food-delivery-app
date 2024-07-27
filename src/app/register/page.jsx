@@ -6,14 +6,18 @@ import React, { useState } from 'react'
 const page = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [creatingUser, setCreatingUser] = useState(false);
+    const [userCreated, setUserCreated] = useState(false);
 
-    const handleFormSubmit = (ev) => {
+    const handleFormSubmit = async (ev) => {
         ev.preventDefault();
-        fetch('/api/register', {
+        setCreatingUser(true);
+        await fetch('/api/register', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-Type': 'application/json'},
         });
+        setCreatingUser(false)
     }
     
       return (
@@ -23,8 +27,10 @@ const page = () => {
             <form onSubmit={handleFormSubmit} 
             className='block max-w-xs mx-auto'>
                 <input type="email" placeholder='email' value={email}
+                disabled={creatingUser}
                 onChange={ev => setEmail(ev.target.value)} />
                 <input type="password" placeholder='password' value={password}
+                disabled={creatingUser}
                 onChange={ev => setPassword(ev.target.value)}/>
                 <button type='submit'>Register</button>
 

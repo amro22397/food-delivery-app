@@ -1,5 +1,5 @@
-import { User } from "@/app/models/User.js";
 import mongoose from "mongoose";
+import { User } from "../../models/User";
 
 export async function POST(req) {
     const body = await req.json();
